@@ -1,0 +1,13 @@
+<new-note (saved)="addNote($event)"></new-note>
+<br />
+<h2 [hidden]="notes.length === 0">Notes</h2>
+<ul class="list-group" *ngFor="let note of notes">
+  <li class="list-group-item list-group-item-action">
+    <note-item
+      (deleted)="removeNote($event)"
+      [title]="note.title"
+      [body]="note.body"
+      [id]="note.id"
+    ></note-item>
+  </li>
+</ul>

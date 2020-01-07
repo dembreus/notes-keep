@@ -1,0 +1,29 @@
+<form class="notes-form">
+  <h2>Add a new note</h2>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input
+      class="form-control"
+      name="title"
+      placeholder="Add title"
+      [value]="title || ''"
+      (change)="title = $event.target.value"
+      type="text"
+    />
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="body">Body</label>
+    <textarea
+      class="form-control"
+      name="body"
+      placeholder="Add body"
+      [value]="body || ''"
+      (change)="body = $event.target.value"
+      type="text"
+    ></textarea>
+  </div>
+  <button class="btn btn-success justify-content-end" (click)="save(note)">
+    Save
+  </button>
+</form>
