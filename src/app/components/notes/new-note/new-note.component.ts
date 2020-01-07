@@ -11,8 +11,8 @@ export class NewNoteComponent {
   @Input("body") public body: string;
   @Output("saved") public saved = new EventEmitter<INote>();
 
-  public save() {
-    let note: INote = {
+  public save(): void {
+    const note: INote = {
       id: Math.round(Math.random() * Date.now()),
       title: this.title,
       body: this.body

@@ -12,13 +12,7 @@ export class NoteItemComponent {
   @Input("body") public body: string;
   @Output("deleted") public deleted = new EventEmitter<number>();
 
-  private _note: INote = {
-    id: this.id,
-    title: this.title,
-    body: this.body
-  };
-
-  public delete(id: number) {
+  public delete(id: number): void {
     console.log("removing :", id);
     this.deleted.emit(id);
   }
