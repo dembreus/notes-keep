@@ -6,8 +6,8 @@
       class="form-control"
       name="title"
       placeholder="Add title"
-      [value]="title || ''"
-      (change)="title = $event.target.value"
+      [(ngModel)]="title"
+      (change)="(save)"
       type="text"
     />
   </div>
@@ -18,8 +18,8 @@
       class="form-control"
       name="body"
       placeholder="Add body"
-      [value]="body || ''"
-      (change)="body = $event.target.value"
+      [(ngModel)]="body"
+      (change)="(save)"
       type="text"
     ></textarea>
   </div>
