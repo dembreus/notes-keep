@@ -1,0 +1,10 @@
+<fa-icon
+  [style.color]="color"
+  [icon]="faHeart"
+  class="faHeart"
+  [class.highlighted]="isActive"
+  (click)="like()"
+>
+  <button></button>
+</fa-icon>
+<p>Likes: {{ likesCount }}</p>
